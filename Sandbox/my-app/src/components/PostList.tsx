@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { Grid, CircularProgress, Typography } from "@mui/material";
-import PostCard from "./PostCard";
-import PostContext from "../context/PostContext";
+import { CircularProgress, Typography, Grid } from "@mui/material";
+import PostCard from "./PostCard.tsx";
+import PostContext from "../context/PostContext.tsx";
 
 const PostList: React.FC = () => {
   const context = useContext(PostContext);
@@ -19,8 +19,8 @@ const PostList: React.FC = () => {
   return (
     <Grid container spacing={2}>
       {posts.map((post) => (
-        <Grid item xs={12} sm={6} md={4} key={post.id}>
-          <PostCard post={post} />
+        <Grid size={{ xs: 8, sm: 4 }}>
+            <PostCard post={post} key={post.id}/>
         </Grid>
       ))}
     </Grid>

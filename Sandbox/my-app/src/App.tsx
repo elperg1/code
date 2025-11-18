@@ -1,19 +1,25 @@
 import React from "react";
 import { Container, Typography } from "@mui/material";
-import { PostProvider } from "./context/PostContext";
-import PostList from "./components/PostList";
+import { PostProvider } from "./context/PostContext.tsx";
+import PostList from "./components/PostList.tsx";
 
 const App: React.FC = () => {
   return (
     <PostProvider>
       <Container sx={{ padding: 4 }}>
+        <h1>My Posts</h1>
         <Typography variant="h4" gutterBottom>
-          📰 Latest Posts
+
+          <PostList/>
         </Typography>
-        <PostList />
+
       </Container>
     </PostProvider>
   );
 };
+
+// function App() {
+//   return <div>Hello, world!</div>;
+// }
 
 export default App;
