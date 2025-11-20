@@ -19,8 +19,8 @@ const PostList: React.FC = () => {
   return (
     <Grid container spacing={2}>
       {posts.map((post) => (
-        <Grid size={{ xs: 8, sm: 4 }}>
-            <PostCard post={post} key={post.id}/>
+        <Grid size={{ xs: 8, sm: 4 }} key={post.id}>
+            <PostCard post={post}/>
         </Grid>
       ))}
     </Grid>
