@@ -18,8 +18,5 @@ const App: React.FC = () => {
   );
 };
 
-// function App() {
-//   return <div>Hello, world!</div>;
-// }
 
 export default App;
